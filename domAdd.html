@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function addition()
+{
+var a,b,c
+a=parseInt(prompt("Enter number1: "))
+b=parseInt(prompt("Enter number2: "))
+c=a+b
+document.getElementById("addID").innerHTML = "Addition of two numbers: "+c
+}
+function substraction()
+{
+var a,b,c
+a=parseInt(prompt("Enter number1: "))
+b=parseInt(prompt("Enter number2: "))
+c=a-b
+document.getElementById("subID").innerHTML = "Substraction of two numbers: "+c
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="ADD" onclick="addition()">
+<input type="button" value="SUBSTRACT" onclick="substraction()">
+</form>
+<h1 id="addID" style="color:green; background-color:yellow"></h1>
+<h2 id="subID" style="color:yellow; background-color:green"></h2>
+</body>
+</html>

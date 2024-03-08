@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Menu Driven Pgm</title>
+</head>
+
+<body>
+    <script>
+        function Addition(a, b) {
+            return a + b
+        }
+
+        function Subtraction(a, b) {
+            return a - b
+        }
+
+        function Multiply(a, b) {
+            return a * b
+        }
+
+        function divide(a, b) {
+            if (b === 0) {
+                return "Error! Division by zero.";
+            } else {
+                return a / b;
+            }
+        }
+
+
+        function main() {
+            let choice = parseInt(prompt("Choose an operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\nEnter your choice (1-4):"));
+
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+
+            let result;
+
+            switch (choice) {
+                case 1:
+                    result = add(num1, num2);
+                    console.log(`Result: ${num1} + ${num2} = ${result}`);
+                    break;
+                case 2:
+                    result = subtract(num1, num2);
+                    console.log(`Result: ${num1} - ${num2} = ${result}`);
+                    break;
+                case 3:
+                    result = multiply(num1, num2);
+                    console.log(`Result: ${num1} * ${num2} = ${result}`);
+                    break;
+                case 4:
+                    result = divide(num1, num2);
+                    console.log(`Result: ${num1} / ${num2} = ${result}`);
+                    break;
+                default:
+                    console.log("Invalid choice!");
+            }
+        }
+        main();
+
+    </script>
+</body>
+
+</html>

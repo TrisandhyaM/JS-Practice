@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function checkOddOrEven(number) {
+            if (number % 2 === 0) {
+                return `${number} is even.`;
+            } else {
+                return `${number} is odd.`;
+            }
+        }
+        function main() {
+            let number = parseInt(prompt("Enter an integer:"));
+            let result = checkOddOrEven(number);
+            console.log(result);
+        }
+        main();
+
+    </script>
+</body>
+
+</html>

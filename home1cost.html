@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Cost Price</title>
+</head>
+
+<body>
+    <script>
+        function calculateProfitOrLoss(costPrice, sellingPrice) {
+            let profit = sellingPrice - costPrice;
+            let loss = costPrice - sellingPrice;
+
+            if (profit > 0) {
+                return `The seller made a profit of $${profit}.`;
+            } else if (loss > 0) {
+                return `The seller incurred a loss of $${loss}.`;
+            } else {
+                return "The seller sold at breakeven.";
+            }
+        }
+        function main() {
+            let costPrice = parseFloat(prompt("Enter the cost price:"));
+            let sellingPrice = parseFloat(prompt("Enter the selling price:"));
+            let result = calculateProfitOrLoss(costPrice, sellingPrice);
+            console.log(result);
+        }
+        main();
+
+    </script>
+</body>
+
+</html>
