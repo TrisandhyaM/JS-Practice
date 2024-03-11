@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Javascript HTML DOM</h1>
+     <p id="intro">
+        Finding Html Elements by Id </p>
+    <p>This example demonstrates the
+     <b>getElementById</b> Method.</p> 
+
+     <!-- <p>Finding Html Element by Class Name.</p> 
+     <p class="intro">Hello WORLD!</p>
+      <p class="intro">This example demonstrates the<b>getElementsByClassName</b>method.</p> -->
+   
+     <P id="demo"></P>
+
+    <script>
+        // To find Element By ID
+        const element = document.getElementById("intro");
+        document.getElementById("demo").innerHTML="The txt from Sandhya First program: " + element.innerHTML;
+
+
+        // TO Find Element By TagName
+        // const element=document.getElementsByTagName("p");
+        // document.getElementsById("demo").innerHTML='The txt In 1st Paragraph(index 0) is: ' +element[0].innerHTML;
+ 
+
+        // To find HTML Elements By Class Name
+        // const x=document.getElementsByClassName("intro");
+        // document.getElementById("demo").innerHTML="The First Paragraph(index 0) with class= intro is:" + x[0].innerHTML;
+
+
+        // Finding HTML Element BY CSS Selectors
+        // const x=document.querySelectorAll("p.intro");
+        // document.getElementById("demo").innerHTML='The First Paragraph(index 0) with class="intro" is: ' + x[0].innerHTML;
+
+
+        
+    </script>
+</body>
+</html>
