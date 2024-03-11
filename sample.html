@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+    body{
+        background-color: black;
+        color: aliceblue;
+    }
+
+  .light {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px yellow; 
+  }
+
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Hello Sandhya ...</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur, nostrum nobis rem hic iusto excepturi doloribus cumque! Similique itaque ex aspernatur dolore cumque asperiores dolorem consequatur voluptas rerum? Quo?
+    Libero doloremque eos voluptates mollitia omnis quibusdam quidem dolorum consectetur corporis ut aperiam, ipsa perferendis voluptatibus dolorem placeat quod praesentium iusto cum nobis in vero quos. Qui deserunt ex molestias!
+    Accusantium quis praesentium consequuntur repellendus? Laborum error dolore temporibus nihil aliquam aspernatur fuga suscipit ab? Inventore fuga labore minus, non tempore quaerat officia dolorum modi omnis illum necessitatibus illo rem.
+    Sequi culpa quibusdam earum iusto nobis minus quam voluptate incidunt maxime veritatis commodi modi voluptatum possimus recusandae, iure non illo odio quia temporibus nam similique praesentium rerum architecto ad. Sed.
+    Sed laboriosam corrupti qui, iure at quibusdam molestiae similique suscipit tenetur vel possimus optio maiores ea molestias expedita, dolore rerum laborum totam doloribus consectetur earum quaerat commodi ipsum delectus! Velit!</p>
+
+    <div id="light-container"></div>
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const lightContainer = document.getElementById("light-container");
+    const light = document.createElement("div");
+    light.classList.add("light");
+    lightContainer.appendChild(light);
+    setInterval(function() {
+      const intensity = Math.random() * 100; 
+      light.style.boxShadow = `0 0 ${intensity}px yellow`;
+    }, 500); // Change every 0.5 seconds
+  });
+</script>
+</body>
+</html>
