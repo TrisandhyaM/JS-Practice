@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        body {
+            background-color: rgb(241, 236, 230);
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: red; background-color: rgb(199, 205, 205);">Event Handling Example</h1>
+
+    <!-- Chnage txt to uppercase -->
+    <h2 style="color:brown;" onclick="changeText(this)">Click on this text!</h2>
+
+    <!-- change to upcase -->
+    Enter your name: <input type="text" id="fname" onchange="upperCase()"><br><BR>
+
+    <!-- Event Listener -->
+
+    Feedback: <input type="text" id="inputField" placeholder="Type something Here..."><br><BR>
+    <button id="submitButton" class="button">Submit</button><br><br>
+
+    <div id="output"></div>
+
+    <!-- nmouseover and onmouseout Events -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:pink;width:80px;height:15px;padding:35px;">
+        Over Here</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Page loaded');
+
+            // Event listener for input field
+            document.getElementById('inputField').addEventListener('input', function (event) {
+                document.getElementById('output').innerText = event.target.value;
+            });
+
+            // Event listener for button click
+            document.getElementById('submitButton').addEventListener('click', function () {
+                alert('Button clicked!');
+            });
+        });
+
+        // Event listener for page unload
+        window.addEventListener('beforeunload', function (event) {
+            event.returnValue = 'Are you sure you want to leave this page?';
+        });
+
+        //change txt 
+
+        function changeText(id) {
+            id.innerHTML = "Hey Good Afternoon ...!";
+        }
+
+        //change uppercase
+
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        //onmouseover and onmouseout Events
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Welcome"
+        }
+
+    </script>
+
+</body>
+
+</html>
