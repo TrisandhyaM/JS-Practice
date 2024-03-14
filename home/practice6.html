@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Printing Object Properties with for...in Loop</title>
+</head>
+<body>
+
+<script>
+//object
+const car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: '2020'
+};
+
+for (let property in car) {
+  console.log(property + ':', car[property]);
+}
+</script>
+
+</body>
+</html>

@@ -8,41 +8,37 @@
 <body>
 
 <script>
-  // Define a string
+
   var myString = "Hello, world!";
 
-  // Demonstrate String.startsWith()
+  //startswith
   if (myString.startsWith("Hello")) {
-    document.write("The string starts with 'Hello'.<br>");
-  } else {
-    document.write("The string does not start with 'Hello'.<br>");
-  }
+    document.write("The string starts with :  'Hello'.<br><br>");
+  } 
 
-  // Demonstrate String.endsWith()
+  // endswith
   if (myString.endsWith("world!")) {
-    document.write("The string ends with 'world!'.<br>");
-  } else {
-    document.write("The string does not end with 'world!'.<br>");
+    document.write("The string ends with :  'world!'.<br><br>");
   }
 
-  // Define an array
+  // Array
   var myArray = [1, 2, 3, 4, 5];
 
-  // Demonstrate Array.from()
+  //Array.from()
   var newArray = Array.from(myArray, x => x * 2);
-  document.write("New array created from original array: " + newArray + "<br>");
+  document.write("New array created from original array:  " + newArray + "<br><br>");
 
-  // Demonstrate Array keys()
+  //Array keys()
   var arrayKeys = Array.from(myArray.keys());
-  document.write("Keys of the array: " + arrayKeys + "<br>");
+  document.write("Keys of the array:  " + arrayKeys + "<br><br>");
 
-  // Demonstrate Array.find()
+  //Array.find()
   var foundElement = myArray.find(element => element > 2);
-  document.write("First element greater than 2: " + foundElement + "<br>");
+  document.write("First element greater than 2:  " + foundElement + "<br><br>");
 
-  // Demonstrate Array.findIndex()
+  //Array.findIndex()
   var foundIndex = myArray.findIndex(element => element > 3);
-  document.write("Index of the first element greater than 3: " + foundIndex + "<br>");
+  document.write("Index of the first element greater than 3:  " + foundIndex + "<br>");
 
 </script>
 
