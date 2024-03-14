@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1>event.PreventDefault</h1>
+       
+        <form id="form">
+            <input type="text" name="username" placeholder="Enter your Name">
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+        document.getElementById("form").addEventListener("submit" , function(event){
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            console.log("Form data:" ,formData);
+        });
+        </script>
+    </body>
+</html>

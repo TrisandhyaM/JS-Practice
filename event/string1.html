@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>String Methods Example</title>
+</head>
+<body>
+<script>
+// Define a sample string
+const sampleString = "Hello, World!";
+
+// String length
+console.log("String Length:", sampleString.length);
+
+// String charAt()
+console.log("Character at index 7:", sampleString.charAt(7));
+
+// String charCodeAt()
+console.log("Unicode of character at index 7:", sampleString.charCodeAt(7));
+// String [ ]
+console.log("Character at index 7 using bracket notation:", sampleString[7]);
+// String slice()
+console.log("Substring from index 7 to end:", sampleString.slice(7));
+// String substring()
+console.log("Substring from index 7 to 12:", sampleString.substring(7, 12));
+// String substr()
+console.log("Substring of length 5 starting from index 7:", sampleString.substr(7, 5));
+// String toUpperCase()
+console.log("Uppercase:", sampleString.toUpperCase());
+// String toLowerCase()
+console.log("Lowercase:", sampleString.toLowerCase());
+// String concat()
+console.log("Concatenation:", sampleString.concat(" Have a nice day!"));
+// String trim()
+const stringWithSpaces = "   Hello, World!   ";
+console.log("Trimmed string:", stringWithSpaces.trim());
+// String trimStart() (Not widely supported)
+console.log("Trimmed start:", stringWithSpaces.trimStart());
+// String trimEnd() (Not widely supported)
+console.log("Trimmed end:", stringWithSpaces.trimEnd());
+// String padStart()
+console.log("Padded start:", sampleString.padStart(20, '.'));
+// String padEnd()
+console.log("Padded end:", sampleString.padEnd(20, '.'));
+// String repeat()
+console.log("Repeated 3 times:", sampleString.repeat(3));
+// String replace()
+console.log("Replaced 'World' with 'Universe':", sampleString.replace('World', 'Universe'));
+// String replaceAll() (Not widely supported)
+console.log("Replaced all 'l' with 'z':", sampleString.replaceAll('l', 'z'));
+// String split()
+console.log("Split by comma:", sampleString.split(','));
+</script>
+
+</body>
+</html>

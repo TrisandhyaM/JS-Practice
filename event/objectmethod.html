@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Object Methods Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+</style>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+// Define object name
+const calculator = {
+  add: function(a, b) {
+    return a + b;
+  },
+  subtract: function(a, b) {
+    return a - b;
+  },
+  multiply: function(a, b) {
+    return a * b;
+  },
+  divide: function(a, b) {
+    if (b === 0) {
+      return "Cannot divide by zero";
+    }
+    return a / b;
+  }
+};
+
+//output
+const outputElement = document.getElementById("output");
+
+outputElement.innerHTML += "Addition: " + calculator.add(5, 3) + "<br>";
+outputElement.innerHTML += "Subtraction: " + calculator.subtract(10, 4) + "<br>";
+outputElement.innerHTML += "Multiplication: " + calculator.multiply(6, 7) + "<br>";
+outputElement.innerHTML += "Division: " + calculator.divide(15, 3) + "<br>";
+outputElement.innerHTML += "Division by zero: " + calculator.divide(10, 0) + "<br>";
+</script>
+
+</body>
+</html>

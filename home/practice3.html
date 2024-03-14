@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<h1>Number Iteration</h1>
+<div id="practice3"></div>
+<script>
+    let output = document.getElementById('practice3');
+    for (let i = 1; i <= 10; i++) {
+        if (i === 5) {
+            continue; // Skips the iteration when encountering number 5
+        }
+        output.innerHTML += "Iteration: " + i + "<br>";
+    }
+</script>
