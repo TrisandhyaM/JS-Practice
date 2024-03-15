@@ -9,7 +9,7 @@
 
 <script>
 
-  var myString = "Hello, world!";
+  let myString = "Hello, world!";
 
   //startswith
   if (myString.startsWith("Hello")) {
@@ -22,18 +22,18 @@
   }
 
   // Array
-  var myArray = [1, 2, 3, 4, 5];
+  let myArray = [1, 2, 3, 4, 5];
 
   //Array.from()
-  var newArray = Array.from(myArray, x => x * 2);
+  let newArray = Array.from(myArray, x => x * 2);
   document.write("New array created from original array:  " + newArray + "<br><br>");
 
   //Array keys()
-  var arrayKeys = Array.from(myArray.keys());
+  let arrayKeys = Array.from(myArray.keys());
   document.write("Keys of the array:  " + arrayKeys + "<br><br>");
 
   //Array.find()
-  var foundElement = myArray.find(element => element > 2);
+  let foundElement = myArray.find(element => element > 2);
   document.write("First element greater than 2:  " + foundElement + "<br><br>");
 
   //Array.findIndex()

@@ -38,12 +38,12 @@
 <script>
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
-    var formData = new FormData(this); // Get form data
+    let formData = new FormData(this); // Get form data
 
-    var displayDiv = document.getElementById("displayData");
+    let displayDiv = document.getElementById("displayData");
     displayDiv.innerHTML = ""; // Clear previous data
 
-    for (var pair of formData.entries()) {
+    for (let pair of formData.entries()) {
         displayDiv.innerHTML += pair[0] + ": " + pair[1] + "<br>"; // Display form data
     }
 });
