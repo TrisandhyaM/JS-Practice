@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple POST Request</title>
+</head>
+<body>
+
+<h2>Make a POST Request</h2>
+<button onclick="makePOSTRequest()">Make POST Request</button>
+<div id="postResponse"></div>
+
+<script>
+function makePOSTRequest() {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: 'foo', body: 'bar', userId: 1 })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    document.getElementById("postResponse").innerHTML = "POST Request Successful";
+  })
+  .catch(error => {
+    console.error('There was a problem with the POST request:', error);
+    document.getElementById("postResponse").innerHTML = "POST Request Failed";
+  });
+}
+</script>
+
+</body>
+</html>
